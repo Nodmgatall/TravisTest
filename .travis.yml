@@ -1,4 +1,4 @@
-langugae: c++
+langugae: €ý,cpp€ý,
 compiler:
   - g++-9.1
 
@@ -12,6 +12,15 @@ branches:
   - develop
 
 os: linux
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+            - llvm-toolchain-precise-3.6
+          packages:
+            - clang-3.6
+      env:
+        - MATRIX_EVAL="CC=gcc-9.1 && CXX=g++-9.1"
 
 
 #In case of mpi cause it interferes with these
@@ -20,6 +29,8 @@ os: linux
 #  - test -n $CXX && unset CXX
 #
 addons:
+  sources:
+    - george-edison55-precise-backports
   apt:
     packages:
       - cmake-data
