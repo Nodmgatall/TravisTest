@@ -1,0 +1,26 @@
+langugae: c++
+compiler:
+  - g++-9.1
+
+git:
+  depth: 3
+  submodules: true
+
+branches:
+  only:
+  - master
+  - develop
+
+os: linux
+
+
+#In case of mpi cause it interferes with these
+#before_install:
+#  - test -n $CC  && unset CC
+#  - test -n $CXX && unset CXX
+#
+addons:
+  apt:
+    packages:
+      - cmake-data
+      - cmake
