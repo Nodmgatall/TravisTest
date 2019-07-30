@@ -1,4 +1,4 @@
-langugae: €ý,cpp€ý,
+langugae: c++
 compiler:
   - g++-9.1
 
