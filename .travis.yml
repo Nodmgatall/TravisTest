@@ -31,4 +31,4 @@ before_install:
     - eval "${MATRIX_EVAL}"
 
 script:
-  - cmake ../CMakeLists.txt && make 
+  - cmake CMakeLists.txt && make 
