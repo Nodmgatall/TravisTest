@@ -37,7 +37,6 @@ before_script:
   - cd build
   # run cmake; here we assume that the project's
   # top-level CMakeLists.txt is located at '..'
-  - cmake ..
 
 script:
  # Link gcc-6 and g++-6 to their standard commands
@@ -49,4 +48,4 @@ script:
   # Check versions of gcc, g++ and cmake
   - gcc -v && g++ -v && cmake --version
   # Run your build commands next
-  - cmake CMakeLists.txt && make 
+  - cmake ../CMakeLists.txt && make 
