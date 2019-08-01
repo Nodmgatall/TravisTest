@@ -12,21 +12,6 @@ branches:
   - master
   - develop
 
-matrix:
-  include:
-    - os: linux
-      addons:
-        apt:
-          sources:
-            - llvm-toolchain-trusty-6.0
-            - george-dision55-precise-backports
-          packages:
-            - clang-6.0
-            - cmake-data
-            - cmake
-      env:
-        - MATRIX_EVAL="CC=clang-6.0 && CXX=clang++-6.0"
-
 before_install:
     - eval "${MATRIX_EVAL}"
 
